@@ -1,28 +1,28 @@
 {
     "cnrm-cm6-1": {
         "toplevel": {
-            "initializedFrom": ""
+            "initializedFrom": "cmip5:cnrm-cm5"
         }, 
         "aerosol": {
-            "initializedFrom": ""
+            "initializedFrom": "cmip5:cnrm-cm5"
         }, 
         "atmos": {
-            "initializedFrom": ""
+            "initializedFrom": "cmip5:cnrm-cm5"
         }, 
         "atmoschem": {
-            "initializedFrom": ""
+            "initializedFrom": "cmip5:cnrm-cm5"
         }, 
         "land": {
-            "initializedFrom": ""
+            "initializedFrom": "cmip5:cnrm-cm5"
         }, 
         "landice": {
-            "initializedFrom": ""
+            "initializedFrom": "cmip5:cnrm-cm5"
         }, 
         "ocean": {
-            "initializedFrom": ""
+            "initializedFrom": "cmip5:cnrm-cm5"
         }, 
         "seaice": {
-            "initializedFrom": ""
+            "initializedFrom": "cmip5:cnrm-cm5"
         }
     }, 
     "cnrm-cm6-1-hr": {
