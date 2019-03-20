@@ -1,0 +1,99 @@
+{
+    "mipEra": "cmip6", 
+    "institute": "cnrm-cerfacs", 
+    "seedingSource": "cmip5:cnrm-cm5", 
+    "sourceID": "cnrm-cm6-1", 
+    "topic": "seaice", 
+    "content": {
+        "cmip6.seaice.dynamics.ice_strength_formulation": {
+            "values": [
+                "Other: p=p*.exp(a(1-c)), p and a are parameters, c is sea ice concentration [0-1]"
+            ]
+        }, 
+        "cmip6.seaice.dynamics.redistribution": {
+            "values": [
+                "Ridging"
+            ]
+        }, 
+        "cmip6.seaice.dynamics.rheology": {
+            "values": [
+                "Other: evp"
+            ]
+        }, 
+        "cmip6.seaice.dynamics.transport_in_thickness_space": {
+            "values": [
+                "Other: linear remapping"
+            ]
+        }, 
+        "cmip6.seaice.grid.discretisation.horizontal.dynamics_time_step": {
+            "values": [
+                21600
+            ]
+        }, 
+        "cmip6.seaice.grid.discretisation.horizontal.grid": {
+            "values": [
+                "Ocean grid"
+            ]
+        }, 
+        "cmip6.seaice.grid.discretisation.horizontal.thermodynamics_time_step": {
+            "values": [
+                86400
+            ]
+        }, 
+        "cmip6.seaice.grid.discretisation.vertical.layering": {
+            "values": [
+                "Other: 10 levels"
+            ]
+        }, 
+        "cmip6.seaice.key_properties.name": {
+            "values": [
+                "Global Experimental Leads and sea ice for ATmosphere and Ocean"
+            ]
+        }, 
+        "cmip6.seaice.key_properties.variables.prognostic": {
+            "values": [
+                "Other: ice and snow enthalpy, ice salinity, ice thickness, ice concentration, snow thickness, snow density, sea ice velocity"
+            ]
+        }, 
+        "cmip6.seaice.radiative_processes.surface_albedo": {
+            "values": [
+                "Other: adapted from flato and brown (1996)"
+            ]
+        }, 
+        "cmip6.seaice.thermodynamics.energy.basal_heat_flux": {
+            "values": [
+                "Other: parametrized (calculated in seaice)"
+            ]
+        }, 
+        "cmip6.seaice.thermodynamics.energy.heat_diffusion": {
+            "values": [
+                "Other: multi-layer on an irregular vertical grid"
+            ]
+        }, 
+        "cmip6.seaice.thermodynamics.mass.new_ice_formation": {
+            "values": [
+                "Brine entrapment as new ice forms is a function of the ice growth rate (Cox and Weeks, 1988)"
+            ]
+        }, 
+        "cmip6.seaice.thermodynamics.melt_ponds.formulation": {
+            "values": [
+                "Other: no"
+            ]
+        }, 
+        "cmip6.seaice.thermodynamics.overview": {
+            "values": [
+                "To account for the presence of melting ponds, the surface albedo of melting sea ice is set to 0.56 in Gelato5."
+            ]
+        }, 
+        "cmip6.seaice.thermodynamics.snow_processes.heat_diffusion": {
+            "values": [
+                "Other: one layer"
+            ]
+        }, 
+        "cmip6.seaice.thermodynamics.snow_processes.redistribution": {
+            "values": [
+                "Snow-aging, Snow-ice"
+            ]
+        }
+    }
+}

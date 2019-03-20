@@ -1,7 +1,7 @@
 {
     "mipEra": "cmip6", 
     "institute": "cnrm-cerfacs", 
-    "seedingSource": "cmip5:cnrm-cm5", 
+    "seedingSource": "Spreadsheet", 
     "sourceID": "cnrm-cm6-1", 
     "topic": "toplevel", 
     "content": {
