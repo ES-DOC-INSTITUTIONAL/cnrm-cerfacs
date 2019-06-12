@@ -22,7 +22,7 @@
         }, 
         "cmip6.atmoschem.key_properties.chemistry_scheme_scope": {
             "values": [
-                "whole atmosphere"
+                "Whole atmosphere"
             ]
         }, 
         "cmip6.atmoschem.key_properties.basic_approximations": {

@@ -262,11 +262,6 @@
             "values": [
                 "Bin"
             ]
-        }, 
-        "cmip6.aerosol.model.bulk_scheme_species": {
-            "values": [
-                "Other: Bin for all species"
-            ]
         }
     }
 }
