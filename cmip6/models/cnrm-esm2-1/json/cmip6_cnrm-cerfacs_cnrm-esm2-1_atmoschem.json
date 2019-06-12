@@ -1,0 +1,99 @@
+{
+    "mipEra": "cmip6", 
+    "institute": "cnrm-cerfacs", 
+    "seedingSource": "Spreadsheet", 
+    "sourceID": "cnrm-esm2-1", 
+    "topic": "atmoschem", 
+    "content": {
+        "cmip6.atmoschem.key_properties.name": {
+            "values": [
+                "REPROBUS-C (v2.0)"
+            ]
+        }, 
+        "cmip6.atmoschem.key_properties.keywords": {
+            "values": [
+                "stratospheric ozone chemistry, chemistry-climate model"
+            ]
+        }, 
+        "cmip6.atmoschem.key_properties.overview": {
+            "values": [
+                "The chemistry scheme of CNRM-ESM2 was first implemented and evaluated in Michou et al. (2011), and more recently during the course of the Chemistry Climate Model Initiative (CCMI) research (e.g., Morgenstern et al. (2017); Wales et al. (2018); Maycock et al. (2018a,b); Zhang et al. (2018)). It is an \u201con-line\u201d scheme whereby the chemistry routines are part of the physics of the atmospheric climate model and called at each time-step of the physics. The scheme does not represent the low troposphere ozone non-methane hydrocarbon chemistry and considers 63 chemistry species that are prognostic variables of the climate model. Chemical evolution is computed down to the 560 hPa level (for details see Michou et al. (2011) and Morgenstern et al. (2017)). Below this level, the concentration of a number of species are relaxed towards the yearly evolving global mean abundances of CMIP6 (Meinshausen et al. (2017)); for the other species concentrations below 560 hPa level are relaxed towards the 560 hPa value. Coherently with the relaxation, explicit emissions, dry deposition, wash-out and parameterised transport (diffusion and convection) of the chemical fields are not considered. The 3-D concentrations of H2O, CO2 , O3 , CH4 , N2O, CFC11, and CFC12 are transferred to the radiative code."
+            ]
+        }, 
+        "cmip6.atmoschem.key_properties.chemistry_scheme_scope": {
+            "values": [
+                "whole atmosphere"
+            ]
+        }, 
+        "cmip6.atmoschem.key_properties.basic_approximations": {
+            "values": [
+                "No explicit ozone tropospheric chemistry"
+            ]
+        }, 
+        "cmip6.atmoschem.key_properties.prognostic_variables_form": {
+            "values": [
+                "3D mass/mixing ratio for gas"
+            ]
+        }, 
+        "cmip6.atmoschem.key_properties.number_of_tracers": {
+            "values": [
+                44
+            ]
+        }, 
+        "cmip6.atmoschem.key_properties.family_approach": {
+            "values": [
+                "True"
+            ]
+        }, 
+        "cmip6.atmoschem.key_properties.coupling_with_chemical_reactivity": {
+            "values": [
+                "TRUE"
+            ]
+        }, 
+        "cmip6.atmoschem.grid.matches_atmosphere_grid": {
+            "values": [
+                "TRUE"
+            ]
+        }, 
+        "cmip6.atmoschem.grid.resolution.name": {
+            "values": [
+                "TL127L91"
+            ]
+        }, 
+        "cmip6.atmoschem.transport.use_atmospheric_transport": {
+            "values": [
+                "TRUE"
+            ]
+        }, 
+        "cmip6.atmoschem.stratospheric_heterogeneous_chemistry.number_of_steady_state_species": {
+            "values": [
+                1
+            ]
+        }, 
+        "cmip6.atmoschem.stratospheric_heterogeneous_chemistry.sedimentation": {
+            "values": [
+                "TRUE"
+            ]
+        }, 
+        "cmip6.atmoschem.tropospheric_heterogeneous_chemistry.number_of_steady_state_species": {
+            "values": [
+                0
+            ]
+        }, 
+        "cmip6.atmoschem.tropospheric_heterogeneous_chemistry.interactive_dry_deposition": {
+            "values": [
+                "FALSE"
+            ]
+        }, 
+        "cmip6.atmoschem.photo_chemistry.number_of_reactions": {
+            "values": [
+                39
+            ]
+        }, 
+        "cmip6.atmoschem.photo_chemistry.photolysis.method": {
+            "values": [
+                "Online"
+            ]
+        }
+    }
+}

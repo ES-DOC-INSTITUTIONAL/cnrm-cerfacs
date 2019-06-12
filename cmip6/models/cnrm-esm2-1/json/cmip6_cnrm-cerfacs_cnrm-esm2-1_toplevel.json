@@ -1,0 +1,19 @@
+{
+    "mipEra": "cmip6", 
+    "institute": "cnrm-cerfacs", 
+    "seedingSource": "cmip5:cnrm-cm5", 
+    "sourceID": "cnrm-esm2-1", 
+    "topic": "toplevel", 
+    "content": {
+        "cmip6.toplevel.key_properties.name": {
+            "values": [
+                "CNRM-CM5"
+            ]
+        }, 
+        "cmip6.toplevel.key_properties.overview": {
+            "values": [
+                "As the coastlines in the ocean and in the atmosphere models do not match, global operations are used to force the absolute conservation of fluxes or a redistribution of the fluxes proportional to the respective ocean and atmosphere basin surfaces (see details in Valcke 2012)"
+            ]
+        }
+    }
+}
