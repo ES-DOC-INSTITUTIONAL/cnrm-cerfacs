@@ -62,7 +62,7 @@
             "publish": "on"
         }, 
         "land": {
-            "publish": "off"
+            "publish": "on"
         }, 
         "ocean": {
             "publish": "off"
