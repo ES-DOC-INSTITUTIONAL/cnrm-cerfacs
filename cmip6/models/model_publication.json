@@ -15,9 +15,6 @@
         "land": {
             "publish": "off"
         }, 
-        "landice": {
-            "publish": "off"
-        }, 
         "ocean": {
             "publish": "off"
         }, 
