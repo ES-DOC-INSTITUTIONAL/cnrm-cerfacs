@@ -15,9 +15,6 @@
         "land": {
             "initializedFrom": "cmip5:cnrm-cm5"
         }, 
-        "landice": {
-            "initializedFrom": "cmip5:cnrm-cm5"
-        }, 
         "ocean": {
             "initializedFrom": "cmip5:cnrm-cm5"
         }, 
