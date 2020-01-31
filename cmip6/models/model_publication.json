@@ -53,7 +53,7 @@
             "publish": "on"
         }, 
         "atmos": {
-            "publish": "off"
+            "publish": "on"
         }, 
         "atmoschem": {
             "publish": "on"
