@@ -7,7 +7,7 @@
             "publish": "off"
         }, 
         "atmos": {
-            "publish": "off"
+            "publish": "on"
         }, 
         "atmoschem": {
             "publish": "off"
@@ -16,7 +16,7 @@
             "publish": "off"
         }, 
         "ocean": {
-            "publish": "off"
+            "publish": "on"
         }, 
         "seaice": {
             "publish": "off"
