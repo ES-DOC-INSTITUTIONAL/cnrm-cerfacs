@@ -12,7 +12,7 @@
         }, 
         "cmip6.ocean.key_properties.overview": {
             "values": [
-                "The ocean component of CNRM-CM6-1/CNRM-ESM2-1 is based on the version 3.6 of NEMO (Nucleus for European Models of the Ocean ; Madec, 2016). It is based on the NOCS-ORCA1 configuration described in details in Danabasoglu et al. (2014). Main differences are highlighted below.\n\tIn CNRM-CM6-1, NEMO is run on eORCA1 horizontal grid, which is an extension of the ORCA1\u00b0 tripolar grid already used in CNRM-CM5.1. The eORCA family differs from the ORCA family by the use of two quasi-isotropic bipolar grids south of 67\u00b0S instead of the former Mercator grid, which allows for a more realistic representation of the contours of Antarctic ice shelves (Mathiot et al., 2017). In eORCA1, a nominal resolution of 1\u00b0 is chosen to which a latitudinal grid refinement of 1/3\u00b0 is added in the tropics.\n\tCNRM-CM6-1 resolves ocean dynamics on 75 vertical levels using a vertical z-coordinate with partial step bathymetry formulation (Barnier et al., 2006). The level thickness increases from 1m near the surface to 200 m at a depth of 6000 m. The time step is 30 minutes. At the surface, the model uses the split-explicit non-linear free surface formulation proposed by Shchepetkin and McWilliams (2005), with a variable volume. Seawater thermodynamics uses the equation of state defined in the Thermodynamic Equation of State 2010 (TEOS-10, IOC et al., 2010), with conservative temperature and absolute salinity being then the prognostic variables. \n\tRadiative transfer in the water column is resolved using a chlorophyll-dependent three-waveband scheme as described in Lengaigne et al. (2007) and Mignot et al. (2013), using a seasonal climatology of surface chlorophyll concentration derived from a former 60-year long simulation run with NEMO-PISCES (e.g. Lee et al., 2016). A vertical profile of chlorophyll concentration is extrapolated from surface concentrations.\n\tLateral diffusivity and viscosity are parameterized as in NOCS-ORCA1 (Danabasoglu et al., 2014). Parameterization of vertical mixing is also similar, with two notable exceptions in CNRM-CM6-1: mixing induced by breaking internal waves is parameterized following de Lavergne et al. (2016) and the Fox-Kemper et al. (2011)  submesoscale mixed layer restratification scheme is activated."
+                "The ocean component of CNRM-ESM2-1 (S\u00e9f\u00e9rian et al. 2019) is based on the version 3.6 of NEMO (Nucleus for European Models of the Ocean ; Madec, 2016), called herefter NEMOv3.6. It is based on the NOCS-ORCA1 configuration described in details in Danabasoglu et al. (2014). Main differences are highlighted below.\n\tNEMOv3.6 is run on eORCA1 horizontal grid, which is an extension of the ORCA1\u00b0 tripolar grid already used in CNRM-CM5.1. The eORCA family differs from the ORCA family by the use of two quasi-isotropic bipolar grids south of 67\u00b0S instead of the former Mercator grid, which allows for a more realistic representation of the contours of Antarctic ice shelves (Mathiot et al., 2017). In eORCA1, a nominal resolution of 1\u00b0 is chosen to which a latitudinal grid refinement of 1/3\u00b0 is added in the tropics.\n\tNEMOv3.6 resolves ocean dynamics on 75 vertical levels using a vertical z-coordinate with partial step bathymetry formulation (Barnier et al., 2006). The level thickness increases from 1m near the surface to 200 m at a depth of 6000 m. The time step is 30 minutes. At the surface, the model uses the split-explicit non-linear free surface formulation proposed by Shchepetkin and McWilliams (2005), with a variable volume. Seawater thermodynamics uses the equation of state defined in the Thermodynamic Equation of State 2010 (TEOS-10, IOC et al., 2010), with conservative temperature and absolute salinity being then the prognostic variables. \n\tRadiative transfer in the water column is resolved using a chlorophyll-dependent three-waveband scheme as described in Lengaigne et al. (2007) and S\u00e9f\u00e9rian et al. (2019).\n\tLateral diffusivity and viscosity are parameterized as in NOCS-ORCA1 (Danabasoglu et al., 2014). Parameterization of vertical mixing is also similar, with two notable exceptions in CNRM-CM6-1: mixing induced by breaking internal waves is parameterized following de Lavergne et al. (2016) and the Fox-Kemper et al. (2011)  submesoscale mixed layer restratification scheme is activated."
             ]
         }, 
         "cmip6.ocean.key_properties.model_family": {
@@ -352,17 +352,17 @@
         }, 
         "cmip6.ocean.lateral_physics.tracers.eddy_diffusity_coeff.type": {
             "values": [
-                "Constant"
+                "Space varying"
             ]
         }, 
-        "cmip6.ocean.lateral_physics.tracers.eddy_diffusity_coeff.constant_coefficient": {
+        "cmip6.ocean.lateral_physics.tracers.eddy_diffusity_coeff.variable_coefficient": {
             "values": [
-                2000
+                "1000m^2/s ponderated by the ratio between the local grid size (max(e1t,e2t)) and the domain maximum grid size (max(maxval(e1t),maxval(e2t)))"
             ]
         }, 
         "cmip6.ocean.lateral_physics.tracers.eddy_diffusity_coeff.coeff_background": {
             "values": [
-                2000
+                1000
             ]
         }, 
         "cmip6.ocean.lateral_physics.tracers.eddy_diffusity_coeff.coeff_backscatter": {
@@ -377,7 +377,7 @@
         }, 
         "cmip6.ocean.lateral_physics.tracers.eddy_induced_velocity.constant_val": {
             "values": [
-                2000
+                1000
             ]
         }, 
         "cmip6.ocean.lateral_physics.tracers.eddy_induced_velocity.flux_type": {
@@ -523,6 +523,11 @@
         "cmip6.ocean.boundary_forcing.tracers.sunlight_penetration.ocean_colour": {
             "values": [
                 "TRUE"
+            ]
+        }, 
+        "cmip6.ocean.boundary_forcing.tracers.sunlight_penetration.extinction_depth_description": {
+            "values": [
+                "The sunlight penetration scheme of NEMOv3.6 treats separately the infrared (all but 300-700 nm), the red (]600, 700] nm), the green (]500, 600] nm) and the blue (]600, 700] nm) wavelengths.\nThis parameterization assumes that 52 % of the downwelling solar radiation radiation is infrared, the remaining fraction (48 %) is split evenly between the red, green and blue wavelength bands (16 % each). \nThe extinction depth of the infrared wavelength band is fixed in space and time to about 3 m. The extinction depths of the red, green and blue wavelengths are computed interactively from the chlorophyll concentration using the formulation proposed in Morel and Maritorena (2001).\nIn CNRM-ESM2-1, the chlorophyll concentrations are taken at each time-step from the marine biogeochemical model PISCESv2-gas."
             ]
         }, 
         "cmip6.ocean.boundary_forcing.tracers.fresh_water_forcing.forced_mode_restoring": {

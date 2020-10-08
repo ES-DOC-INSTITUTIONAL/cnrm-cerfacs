@@ -7,7 +7,17 @@
     "content": {
         "cmip6.atmos.key_properties.name": {
             "values": [
-                "Arpege climat V5"
+                "ARPEGE-Climat Version 6.3"
+            ]
+        }, 
+        "cmip6.atmos.key_properties.keywords": {
+            "values": [
+                "ARPEGE-Climat, dynamical core, cloud parameterization, turbulence parameterization, convection parameterization, gravity wave parameterization"
+            ]
+        }, 
+        "cmip6.atmos.key_properties.overview": {
+            "values": [
+                "ARPEGE-Climat Version 6.3 is the atmospheric component of the CNRM climate and Earth System models (CNRM-CM6-1 and CNRM-ESM2-1). It is based on the cycle 37 of the ARPEGE/IFS model (declared in 2010), developed under a collaboration between M\u00e9t\u00e9o-France and ECMWF. ARPEGE-Climat shares a large part of its physics and dynamics with its NWP counterpart ARPEGE used operationnally at M\u00e9t\u00e9o-France. In comparison to ARPEGE-Climat Version 5.1 used for the CMIP5 exercice in CNRM-CM5.1, most of the atmospheric physics has been updated or revisited (Roehrig et al. 2019, Voldoire et al. 2019). For the surface, it is coupled to the SURFEX platform (Decharme et al. 2019)."
             ]
         }, 
         "cmip6.atmos.key_properties.model_family": {
@@ -17,12 +27,49 @@
         }, 
         "cmip6.atmos.key_properties.basic_approximations": {
             "values": [
+                "hydrostatic", 
+                "Boussinesq", 
                 "Primitive equations"
+            ]
+        }, 
+        "cmip6.atmos.key_properties.resolution.horizontal_resolution_name": {
+            "values": [
+                "T127"
+            ]
+        }, 
+        "cmip6.atmos.key_properties.resolution.canonical_horizontal_resolution": {
+            "values": [
+                "roughly 150x150 km (1.4x1.4 degrees lat-lon at the equator)"
+            ]
+        }, 
+        "cmip6.atmos.key_properties.resolution.range_horizontal_resolution": {
+            "values": [
+                "roughly 150 km (reduced gaussian grid)"
+            ]
+        }, 
+        "cmip6.atmos.key_properties.resolution.number_of_vertical_levels": {
+            "values": [
+                91
+            ]
+        }, 
+        "cmip6.atmos.key_properties.resolution.high_top": {
+            "values": [
+                "TRUE"
             ]
         }, 
         "cmip6.atmos.key_properties.timestepping.timestep_dynamics": {
             "values": [
-                1800
+                900
+            ]
+        }, 
+        "cmip6.atmos.key_properties.timestepping.timestep_shortwave_radiative_transfer": {
+            "values": [
+                3600
+            ]
+        }, 
+        "cmip6.atmos.key_properties.timestepping.timestep_longwave_radiative_transfer": {
+            "values": [
+                3600
             ]
         }, 
         "cmip6.atmos.key_properties.orography.type": {
@@ -30,9 +77,70 @@
                 "Other: present day"
             ]
         }, 
+        "cmip6.atmos.key_properties.tuning_applied.description": {
+            "values": [
+                "A significant part of the parameterization internal parameters, especially for the moist physics, were first guessed using single-column simulations of a few case studies (mostly shallow and deep convection). Then other relevant parameters (especially those regarding cloud microphysics and cloud radiative properties) were further tuned to achieve reasonable present-day top-of-atmosphere and surface radiative fluxes, using CERES data as an observational target. A specific attention was also given to precipitation (e.g., seasonal climatologies, daily distribution over several regions - references: GPCP/TRMM), clouds (climatologies of cloud radiative effects, cloud amount - references: CERES, CloudSat/CALIPSO), low- and upper-level large-scale circulations (seasonal climatologies - reference: ERA-Interim), and some aspects of the variability (e.g., QBO)."
+            ]
+        }, 
+        "cmip6.atmos.key_properties.tuning_applied.global_mean_metrics_used": {
+            "values": [
+                "shortwave and longwave radiative fluxes at the top of the atmosphere and at the surface of the ocean, shortwave and longwave cloud radiative effects"
+            ]
+        }, 
+        "cmip6.atmos.key_properties.tuning_applied.regional_metrics_used": {
+            "values": [
+                "seasonal climatologies of precipitation, seasonal climatologies of the large-scale circulation (wind at 850 and 200hPa, mean sea level pressure), annual climatology of cloud amount and cloud radiative effect, daily precipitation distribution over tropical land and tropical ocean and several continental areas of the midlatitudes."
+            ]
+        }, 
+        "cmip6.atmos.key_properties.tuning_applied.trend_metrics_used": {
+            "values": [
+                "None"
+            ]
+        }, 
+        "cmip6.atmos.grid.name": {
+            "values": [
+                "T127 triangular trunction and equivalent gaussian grid"
+            ]
+        }, 
+        "cmip6.atmos.grid.overview": {
+            "values": [
+                "ARPEGE-Climat uses a reduced T127 gaussian grid and the equivalent spectral T127 triangular trunction, depending on the computations (Hortal and Simmons, 1991)."
+            ]
+        }, 
         "cmip6.atmos.grid.discretisation.horizontal.scheme_type": {
             "values": [
-                "Spectral"
+                "spectral", 
+                "fixed grid"
+            ]
+        }, 
+        "cmip6.atmos.grid.discretisation.horizontal.scheme_order": {
+            "values": [
+                "Other: spectral"
+            ]
+        }, 
+        "cmip6.atmos.grid.discretisation.horizontal.horizontal_pole": {
+            "values": [
+                "Other: Not needed"
+            ]
+        }, 
+        "cmip6.atmos.grid.discretisation.horizontal.grid_type": {
+            "values": [
+                "Gaussian"
+            ]
+        }, 
+        "cmip6.atmos.grid.discretisation.vertical.coordinate_type": {
+            "values": [
+                "hybrid sigma-pressure: sigma system near terrain and isobaric above"
+            ]
+        }, 
+        "cmip6.atmos.dynamical_core.name": {
+            "values": [
+                "Two-time-level semi-lagrangian semi-implicit scheme"
+            ]
+        }, 
+        "cmip6.atmos.dynamical_core.overview": {
+            "values": [
+                "The time discretization is based on a two-time-level semi-Lagrangian semi-implicit numerical integration scheme (e.g., C\u00f4t\u00e9 & Staniforth, 1988). The non-linear terms appearing in the right-hand side of the primitive equations are averaged along the trajectory using their interpolation at the trajectory mid- and departure points. The scheme uses 32-point quasi-cubic interpolations (linear interpolation along the edges of the stencil, fully cubic in the interior \u2013 see Ritchie et al., 1995). Interpolation are also quasi-monotone for all model advected variables (Bermejo & Staniforth, 1992), except the vertical interpolations involved in the momentum and thermodynamic equations. The semi-Lagrangian dynamical core is not fully conservative (e.g., Lucarini & Ragone, 2011). A local mass fixer algorithm based on Bermejo and Conde (2002) is applied to specific humidity and microphysical species (Diamantakis & Flemming, 2014). A global and uniform conservation procedure for the model atmosphere dry mass (additive correction on the surface pressure) and total water content (multiplicative correction on the surface precipitation flux) is also applied every time step. "
             ]
         }, 
         "cmip6.atmos.dynamical_core.timestepping_type": {
@@ -44,39 +152,33 @@
             "values": [
                 "Divergence/curl", 
                 "Surface pressure", 
-                "Temperature", 
-                "Total water"
+                "Temperature"
             ]
         }, 
-        "cmip6.atmos.dynamical_core.top_boundary.top_boundary_condition": {
+        "cmip6.atmos.radiation.name": {
             "values": [
-                "Radiation boundary condition"
-            ]
-        }, 
-        "cmip6.atmos.dynamical_core.diffusion_horizontal.scheme_name": {
-            "values": [
-                "Nabla 6"
-            ]
-        }, 
-        "cmip6.atmos.dynamical_core.diffusion_horizontal.scheme_method": {
-            "values": [
-                "Iterated Laplacian"
+                "RRTMG for the longwave and Fouquart-Morcrette for the shortwave"
             ]
         }, 
         "cmip6.atmos.radiation.overview": {
             "values": [
-                "Voldoire A. (2011) : the effective radius of cloud particle is calculated taking into account the indirect effects of sulfate aerosols."
+                "The longwave radiation scheme is based on the version of the Rapid Radiation Transfer Model (RRTM, Mlawer et al. 1997) optimized for GCM, and included in the cycle 37 of the ARPEGE/IFS system (very close to that in the cycle 32, Morcrette et al. The RRTM scheme follows the two-stream approach and computes upward and downward radiative fluxes in 16 spectral bands encompassing the 10-3000 cm-1 range. The parameterization uses the correlated-k approach with 140 g-points (the number per spectral band depends on the absorption coefficient variations within this band and on the spectral band contribution to the total flux). It includes line absorption by H2O, CO2 , O3 , CH4 , N2O, CFC-11, CFC-12 and CCl4 based on the HITRAN 1996 spectrocospic data base (Rothman et al., 1998) and on the CKD 2.2 water vapor continuum model (Clough et al. 1989). The shortwave radiation scheme, originally developed by Fouquart and Bonnel (1980) and which further evolved in the IFS system until its cycle 32r2 (Morcrette et al., 2008), integrates the fluxes over the whole shortwave spectrum between 200 and 4000 nm. The scheme includes Rayleigh scattering, absorption by water vapor and ozone, both varying in space and time, and by CO2, N2O, CO, CH4 and O2, which are treated as uniformly mixed gases. The parameterization resolved the radiative transfer equations in 6 spectral bands, three bands being in the UV and visible spectral range (185-250, 250-440 and 440-690 nm) and three bands covering the near infrared range (690-1190, 1190-2380 and 2380-4000 nm)."
             ]
         }, 
         "cmip6.atmos.radiation.aerosols": {
             "values": [
-                "Other: black carbon / soot", 
-                "POM: particulate organic matter", 
+                "Other: Volcanic aerosols", 
+                "BC: black carbon / soot", 
                 "Dust", 
-                "Ice", 
                 "Organic", 
                 "Sea salt", 
-                "Sulphate"
+                "Sulphate", 
+                "Other: stratospheric aerosols"
+            ]
+        }, 
+        "cmip6.atmos.radiation.shortwave_radiation.name": {
+            "values": [
+                "Fouquart-Morcrette (IFS cycle 32r2)"
             ]
         }, 
         "cmip6.atmos.radiation.shortwave_radiation.spectral_integration": {
@@ -84,19 +186,83 @@
                 "Wide-band model"
             ]
         }, 
+        "cmip6.atmos.radiation.shortwave_radiation.transport_calculation": {
+            "values": [
+                "two-stream"
+            ]
+        }, 
         "cmip6.atmos.radiation.shortwave_radiation.spectral_intervals": {
             "values": [
                 6
             ]
         }, 
+        "cmip6.atmos.radiation.shortwave_radiation.general_interactions": {
+            "values": [
+                "scattering", 
+                "emission/absorption,"
+            ]
+        }, 
+        "cmip6.atmos.radiation.shortwave_GHG.greenhouse_gas_complexity": {
+            "values": [
+                "H2O", 
+                "CO2: Carbon Dioxide", 
+                "O3"
+            ]
+        }, 
+        "cmip6.atmos.radiation.shortwave_cloud_ice.physical_representation": {
+            "values": [
+                "ice water path: Integrated ice water path through the cloud kg m-2", 
+                "effective crystal radius"
+            ]
+        }, 
+        "cmip6.atmos.radiation.shortwave_cloud_ice.optical_methods": {
+            "values": [
+                "Mie theory: For spherical particles"
+            ]
+        }, 
+        "cmip6.atmos.radiation.shortwave_cloud_liquid.physical_representation": {
+            "values": [
+                "cloud droplet number concentration: CDNC", 
+                "liquid water path: Integrated liquid water path through the cloud kg m-2", 
+                "effective cloud droplet radii"
+            ]
+        }, 
+        "cmip6.atmos.radiation.shortwave_cloud_liquid.optical_methods": {
+            "values": [
+                "Mie theory: For spherical particles"
+            ]
+        }, 
+        "cmip6.atmos.radiation.shortwave_cloud_inhomogeneity.cloud_inhomogeneity": {
+            "values": [
+                "analytic"
+            ]
+        }, 
+        "cmip6.atmos.radiation.shortwave_aerosols.physical_representation": {
+            "values": [
+                "size distribution", 
+                "asymmetry", 
+                "Other: single scatering albedo", 
+                "Other: mass concentration"
+            ]
+        }, 
+        "cmip6.atmos.radiation.shortwave_aerosols.optical_methods": {
+            "values": [
+                "Mie theory: For spherical particles"
+            ]
+        }, 
+        "cmip6.atmos.radiation.longwave_radiation.name": {
+            "values": [
+                "RRTMG"
+            ]
+        }, 
         "cmip6.atmos.radiation.longwave_radiation.spectral_integration": {
             "values": [
-                "Other: k-correlated (rrtm)"
+                "correlated-k"
             ]
         }, 
         "cmip6.atmos.radiation.longwave_radiation.transport_calculation": {
             "values": [
-                "Two-stream"
+                "two-stream"
             ]
         }, 
         "cmip6.atmos.radiation.longwave_radiation.spectral_intervals": {
@@ -104,14 +270,87 @@
                 16
             ]
         }, 
+        "cmip6.atmos.radiation.longwave_radiation.general_interactions": {
+            "values": [
+                "emission/absorption,", 
+                "scattering"
+            ]
+        }, 
+        "cmip6.atmos.radiation.longwave_GHG.greenhouse_gas_complexity": {
+            "values": [
+                "H2O", 
+                "O3", 
+                "CO2: Carbon Dioxide", 
+                "CH4: Methane", 
+                "N2O: Nitrous Oxide", 
+                "CFC-11 eq: Summarize the effect of non CO2, CH4, N2O and CFC-12 gases with an equivalence concentration of CFC-11", 
+                "CFC-12 eq: Summarize the radiative effect of the Ozone Depleating Substances, ODSs, with a CFC-12 equivalence concentration", 
+                "Other: CCl4"
+            ]
+        }, 
+        "cmip6.atmos.radiation.longwave_cloud_ice.physical_reprenstation": {
+            "values": [
+                "ice water path: Integrated ice water path through the cloud kg m-2", 
+                "effective crystal radius"
+            ]
+        }, 
+        "cmip6.atmos.radiation.longwave_cloud_ice.optical_methods": {
+            "values": [
+                "Mie theory: For spherical particles"
+            ]
+        }, 
+        "cmip6.atmos.radiation.longwave_cloud_liquid.physical_representation": {
+            "values": [
+                "cloud droplet number concentration: CDNC", 
+                "liquid water path: Integrated liquid water path through the cloud kg m-2", 
+                "effective cloud droplet radii"
+            ]
+        }, 
+        "cmip6.atmos.radiation.longwave_cloud_liquid.optical_methods": {
+            "values": [
+                "Mie theory: For spherical particles"
+            ]
+        }, 
+        "cmip6.atmos.radiation.longwave_cloud_inhomogeneity.cloud_inhomogeneity": {
+            "values": [
+                "analytic"
+            ]
+        }, 
+        "cmip6.atmos.radiation.longwave_aerosols.physical_representation": {
+            "values": [
+                "size distribution", 
+                "Other: mass concentration"
+            ]
+        }, 
+        "cmip6.atmos.radiation.longwave_aerosols.optical_methods": {
+            "values": [
+                "Mie theory: For spherical particles"
+            ]
+        }, 
+        "cmip6.atmos.turbulence_convection.name": {
+            "values": [
+                "PCMT for convection and CBR for turbulence"
+            ]
+        }, 
+        "cmip6.atmos.turbulence_convection.overview": {
+            "values": [
+                "The turbulence scheme mainly follows the approach of Cuxart et al. (2000), considering additional effect of condensation. The mixing-length is non-local based on the work of Bougeault and Lacarrere (1989). Dry, moist and precipitating convection are represented with a unified mass-flux framework, based on the work of Piriou, Gueremy, and Bouteloup (2018). It follows the ideas of Gueremy (2011) for the convective profile and those of Piriou et al. (2007) which proposed to explicitly separate the convective vertical transport from the convective mi- crophysical processes. "
+            ]
+        }, 
         "cmip6.atmos.turbulence_convection.boundary_layer_turbulence.scheme_name": {
             "values": [
-                "Mellor-Yamada"
+                "Mellor-Yamada", 
+                "EDMF: Combined Eddy Diffusivity Mass-Flux"
             ]
         }, 
         "cmip6.atmos.turbulence_convection.boundary_layer_turbulence.scheme_type": {
             "values": [
-                "TKE diagnostic"
+                "Monin-Obukhov similarity", 
+                "TKE prognostic", 
+                "TKE coupled with water", 
+                "non-local diffusion", 
+                "Coupled with convection", 
+                "Other: Parameterization of entrainment at the top of the boundary layer"
             ]
         }, 
         "cmip6.atmos.turbulence_convection.boundary_layer_turbulence.closure_order": {
@@ -121,30 +360,80 @@
         }, 
         "cmip6.atmos.turbulence_convection.boundary_layer_turbulence.counter_gradient": {
             "values": [
-                true
+                "FALSE"
             ]
         }, 
         "cmip6.atmos.turbulence_convection.deep_convection.scheme_name": {
             "values": [
-                "Philippe Bougeault (1985)"
+                "PCMT (Prognostic Condensate Microphysics and Transport)"
             ]
         }, 
         "cmip6.atmos.turbulence_convection.deep_convection.scheme_type": {
             "values": [
-                "Mass-flux"
+                "mass-flux"
+            ]
+        }, 
+        "cmip6.atmos.turbulence_convection.deep_convection.scheme_method": {
+            "values": [
+                "bulk: A bulk mass flux scheme is used", 
+                "CAPE: Mass flux determined by CAPE, convectively available potential energy.", 
+                "Other: sepration between microphysics and transport, detailed 1-moment microphysics"
             ]
         }, 
         "cmip6.atmos.turbulence_convection.deep_convection.processes": {
             "values": [
                 "Entrainment", 
-                "Penetrative convection", 
-                "Radiative effect of anvils", 
-                "Vertical momentum transport"
+                "detrainment", 
+                "updrafts", 
+                "downdrafts", 
+                "penetrative convection", 
+                "re-evaporation of convective precipitation", 
+                "convective momentum transport"
+            ]
+        }, 
+        "cmip6.atmos.turbulence_convection.deep_convection.microphysics": {
+            "values": [
+                "single moment"
+            ]
+        }, 
+        "cmip6.atmos.turbulence_convection.shallow_convection.scheme_name": {
+            "values": [
+                "PCMT"
+            ]
+        }, 
+        "cmip6.atmos.turbulence_convection.shallow_convection.scheme_type": {
+            "values": [
+                "mass-flux"
+            ]
+        }, 
+        "cmip6.atmos.turbulence_convection.shallow_convection.scheme_method": {
+            "values": [
+                "same as deep (unified)"
+            ]
+        }, 
+        "cmip6.atmos.turbulence_convection.shallow_convection.processes": {
+            "values": [
+                "Other: same as deep"
+            ]
+        }, 
+        "cmip6.atmos.turbulence_convection.shallow_convection.microphysics": {
+            "values": [
+                "single moment"
+            ]
+        }, 
+        "cmip6.atmos.microphysics_precipitation.name": {
+            "values": [
+                "Lopez (2002) scheme"
+            ]
+        }, 
+        "cmip6.atmos.microphysics_precipitation.overview": {
+            "values": [
+                "The microphysical scheme used in ARPEGE-Climat 6.3 was first developed by Lopez (2002). It mainly follows the approach proposed in Fowler et al. (1996), but with a reduced complexity. A prognostic treatment of the specific mass of four microphysical species (cloud liquid water, cloud ice, rain and snow) is adopted, with two main arguments for using prognostic equations to describe precipitating condensates: (i) given the relatively short time step of the model (15 min), it provides a finer description of the time evolution of the precipitation vertical distribution and associated processes (especially for snow) and (ii) it will allows a more direct approach for future data assimilation of precipitation data in the ARPEGE numerical weather prediction version, so that its use in climate application contributes to the seamless approach seeked at M \u00e9t\u00e9o-France (Bouteloup et al. 2011)."
             ]
         }, 
         "cmip6.atmos.microphysics_precipitation.large_scale_precipitation.scheme_name": {
             "values": [
-                "Ricard and Royer"
+                "Lopez (2002) scheme"
             ]
         }, 
         "cmip6.atmos.microphysics_precipitation.large_scale_precipitation.hydrometeors": {
@@ -155,7 +444,28 @@
         }, 
         "cmip6.atmos.microphysics_precipitation.large_scale_cloud_microphysics.scheme_name": {
             "values": [
-                "Kessler-type"
+                "Lopez (2002) scheme"
+            ]
+        }, 
+        "cmip6.atmos.microphysics_precipitation.large_scale_cloud_microphysics.processes": {
+            "values": [
+                "Cloud droplets", 
+                "Cloud ice"
+            ]
+        }, 
+        "cmip6.atmos.cloud_scheme.name": {
+            "values": [
+                "Bougeault (1981)"
+            ]
+        }, 
+        "cmip6.atmos.cloud_scheme.overview": {
+            "values": [
+                "The cloud scheme is based on a statistical joint distribution of qt and thetal following Sommeria and Deardorff (1977), Bougeault (1981) and Ricard and Royer (1993). It is coupled to the turbulence scheme to compute the second-order moment of qt and thetal."
+            ]
+        }, 
+        "cmip6.atmos.cloud_scheme.scheme_type": {
+            "values": [
+                "diagnostic"
             ]
         }, 
         "cmip6.atmos.cloud_scheme.uses_separate_treatment": {
@@ -165,7 +475,31 @@
         }, 
         "cmip6.atmos.cloud_scheme.processes": {
             "values": [
-                "Other: max-random overlap"
+                "bulk cloud"
+            ]
+        }, 
+        "cmip6.atmos.cloud_scheme.prognostic_variables": {
+            "values": [
+                "liquid", 
+                "ice"
+            ]
+        }, 
+        "cmip6.atmos.cloud_scheme.atmos_coupling": {
+            "values": [
+                "atmosphere_radiation", 
+                "atmosphere_microphysics_precipitation", 
+                "atmosphere_turbulence_convection", 
+                "atmosphere_observation_simulation"
+            ]
+        }, 
+        "cmip6.atmos.cloud_scheme.optical_cloud_properties.cloud_overlap_method": {
+            "values": [
+                "maximum-random: combination of maximum and random overlap between clouds"
+            ]
+        }, 
+        "cmip6.atmos.cloud_scheme.optical_cloud_properties.cloud_inhomogeneity": {
+            "values": [
+                "Constant cloud inhomogeneity parameter"
             ]
         }, 
         "cmip6.atmos.cloud_scheme.sub_grid_scale_water_distribution.type": {
@@ -175,7 +509,7 @@
         }, 
         "cmip6.atmos.cloud_scheme.sub_grid_scale_water_distribution.function_name": {
             "values": [
-                "Philippe Bougeault (1982)"
+                "Bougeault (1981)"
             ]
         }, 
         "cmip6.atmos.cloud_scheme.sub_grid_scale_water_distribution.function_order": {
@@ -185,7 +519,37 @@
         }, 
         "cmip6.atmos.cloud_scheme.sub_grid_scale_water_distribution.convection_coupling": {
             "values": [
-                "Coupled with deep"
+                "not coupled with convection"
+            ]
+        }, 
+        "cmip6.atmos.cloud_scheme.sub_grid_scale_ice_distribution.type": {
+            "values": [
+                "diagnostic"
+            ]
+        }, 
+        "cmip6.atmos.cloud_scheme.sub_grid_scale_ice_distribution.function_name": {
+            "values": [
+                "Bougeault (1981)"
+            ]
+        }, 
+        "cmip6.atmos.cloud_scheme.sub_grid_scale_ice_distribution.function_order": {
+            "values": [
+                2
+            ]
+        }, 
+        "cmip6.atmos.cloud_scheme.sub_grid_scale_ice_distribution.convection_coupling": {
+            "values": [
+                "coupled with deep"
+            ]
+        }, 
+        "cmip6.atmos.observation_simulation.name": {
+            "values": [
+                "COSP: CFMIP Observation Simulator Package"
+            ]
+        }, 
+        "cmip6.atmos.observation_simulation.overview": {
+            "values": [
+                "COSP version 1.4.1 was used inline for all CMIP6 experiments"
             ]
         }, 
         "cmip6.atmos.observation_simulation.isscp_attributes.top_height_estimation_method": {
@@ -201,7 +565,7 @@
         }, 
         "cmip6.atmos.observation_simulation.cosp_attributes.run_configuration": {
             "values": [
-                "Offline"
+                "Inline"
             ]
         }, 
         "cmip6.atmos.observation_simulation.cosp_attributes.number_of_sub_columns": {
@@ -211,38 +575,74 @@
         }, 
         "cmip6.atmos.observation_simulation.cosp_attributes.number_of_levels": {
             "values": [
-                31
+                40
+            ]
+        }, 
+        "cmip6.atmos.observation_simulation.radar_inputs.frequency": {
+            "values": [
+                94
             ]
         }, 
         "cmip6.atmos.observation_simulation.radar_inputs.type": {
             "values": [
-                "Space borne"
+                "space borne"
             ]
         }, 
         "cmip6.atmos.observation_simulation.radar_inputs.gas_absorption": {
             "values": [
-                true
+                "TRUE"
             ]
         }, 
         "cmip6.atmos.observation_simulation.radar_inputs.effective_radius": {
             "values": [
-                true
+                "TRUE"
             ]
         }, 
         "cmip6.atmos.observation_simulation.lidar_inputs.ice_types": {
             "values": [
-                "Ice spheres"
+                "ice spheres"
+            ]
+        }, 
+        "cmip6.atmos.observation_simulation.lidar_inputs.overlap": {
+            "values": [
+                "Other: maximum-random overlap"
+            ]
+        }, 
+        "cmip6.atmos.gravity_waves.name": {
+            "values": [
+                "Geleyn scheme for orographic GW, Lott scheme for non-orographic GW"
+            ]
+        }, 
+        "cmip6.atmos.gravity_waves.overview": {
+            "values": [
+                "The orographic gravity wave drag parameterization used in ARPEGE-Climat 6.3 is described in D\u00e9qu\u00e9 et al. (1994) and Geleyn et al. (1994), with a few updates introduced by Catry et al. (2008). Parameterization of non-orographic gravity waves follows the works of Lott et al (2012), Lott and Guez (2013) and de la Camara et al (2013)."
+            ]
+        }, 
+        "cmip6.atmos.gravity_waves.sponge_layer": {
+            "values": [
+                "Rayleigh friction"
+            ]
+        }, 
+        "cmip6.atmos.gravity_waves.background": {
+            "values": [
+                "discrete spectrum"
             ]
         }, 
         "cmip6.atmos.gravity_waves.subgrid_scale_orography": {
             "values": [
-                "Effect on drag", 
-                "Effect on lifting"
+                "effect on drag", 
+                "effect on lifting"
+            ]
+        }, 
+        "cmip6.atmos.gravity_waves.orographic_gravity_waves.name": {
+            "values": [
+                "Geleyn scheme"
             ]
         }, 
         "cmip6.atmos.gravity_waves.orographic_gravity_waves.source_mechanisms": {
             "values": [
-                "Linear mountain waves", 
+                "linear mountain waves", 
+                "low level flow blocking", 
                 "Statistical sub-grid scale variance"
             ]
         }, 
@@ -256,14 +656,61 @@
                 "Non-linear theory"
             ]
         }, 
+        "cmip6.atmos.gravity_waves.orographic_gravity_waves.dissipation_scheme": {
+            "values": [
+                "wave saturation vs Richardson number"
+            ]
+        }, 
+        "cmip6.atmos.gravity_waves.non_orographic_gravity_waves.name": {
+            "values": [
+                "Lott scheme"
+            ]
+        }, 
+        "cmip6.atmos.gravity_waves.non_orographic_gravity_waves.source_mechanisms": {
+            "values": [
+                "convection", 
+                "Other: Frontal system"
+            ]
+        }, 
+        "cmip6.atmos.gravity_waves.non_orographic_gravity_waves.calculation_method": {
+            "values": [
+                "temporally dependent", 
+                "spatially dependent"
+            ]
+        }, 
+        "cmip6.atmos.gravity_waves.non_orographic_gravity_waves.propagation_scheme": {
+            "values": [
+                "linear theory"
+            ]
+        }, 
+        "cmip6.atmos.gravity_waves.non_orographic_gravity_waves.dissipation_scheme": {
+            "values": [
+                "single wave"
+            ]
+        }, 
+        "cmip6.atmos.natural_forcing.name": {
+            "values": [
+                "CMIP6"
+            ]
+        }, 
+        "cmip6.atmos.natural_forcing.overview": {
+            "values": [
+                "The CMIP6 specification were used for the natural forcings of ARPEGE-Climat 6.3"
+            ]
+        }, 
+        "cmip6.atmos.natural_forcing.solar_pathways.pathways": {
+            "values": [
+                "SW radiation: Shortwave solar spectral irradiance."
+            ]
+        }, 
         "cmip6.atmos.natural_forcing.solar_constant.type": {
             "values": [
-                "Transient"
+                "transient"
             ]
         }, 
         "cmip6.atmos.natural_forcing.solar_constant.transient_characteristics": {
             "values": [
-                "Strictly as specified by CMIP5 for each experiment , both for reference level and for variations"
+                "monthly average of the bulk solar constant, following CMIP6 specification."
             ]
         }, 
         "cmip6.atmos.natural_forcing.orbital_parameters.type": {
@@ -271,14 +718,19 @@
                 "Transient"
             ]
         }, 
-        "cmip6.atmos.natural_forcing.orbital_parameters.transient_method": {
-            "values": [
-                "Philippe Courtier method"
-            ]
-        }, 
         "cmip6.atmos.natural_forcing.insolation_ozone.solar_ozone_impact": {
             "values": [
-                true
+                "TRUE"
+            ]
+        }, 
+        "cmip6.atmos.natural_forcing.volcanoes_treatment.volcanoes_characteristics": {
+            "values": [
+                "ARPEGE-Climat uses the volcanoe aerosol optical depth following the CMIP6 specifications (monthly average). The mass of aerosol is then redistributed along the vertical with a profile constant in time and space. It is considered as a class of stratospheric aerosols."
+            ]
+        }, 
+        "cmip6.atmos.natural_forcing.volcanoes_treatment.volcanoes_implementation": {
+            "values": [
+                "stratospheric aerosols optical thickness"
             ]
         }
     }
