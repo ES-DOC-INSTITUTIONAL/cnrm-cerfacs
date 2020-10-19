@@ -150,9 +150,90 @@
         }, 
         "cmip6.atmos.dynamical_core.prognostic_variables": {
             "values": [
-                "Divergence/curl", 
-                "Surface pressure", 
-                "Temperature"
+                "divergence/curl", 
+                "surface pressure", 
+                "temperature", 
+                "water liquid", 
+                "water ice", 
+                "Other: rain", 
+                "Other: snow", 
+                "Other: convective water liquid, water ice, rain and snow", 
+                "Other: ozone"
+            ]
+        }, 
+        "cmip6.atmos.dynamical_core.top_boundary.top_boundary_condition": {
+            "values": [
+                "Radiation boundary condition"
+            ]
+        }, 
+        "cmip6.atmos.dynamical_core.top_boundary.top_heat": {
+            "values": [
+                "zero flux"
+            ]
+        }, 
+        "cmip6.atmos.dynamical_core.top_boundary.top_wind": {
+            "values": [
+                "zero flux"
+            ]
+        }, 
+        "cmip6.atmos.dynamical_core.lateral_boundary.condition": {
+            "values": [
+                "Other: N/A"
+            ]
+        }, 
+        "cmip6.atmos.dynamical_core.diffusion_horizontal.scheme_name": {
+            "values": [
+                "6th order laplacian applied on vorticity, divergence, temperature, humidity and ozone (done in the spectral space, implicit)"
+            ]
+        }, 
+        "cmip6.atmos.dynamical_core.diffusion_horizontal.scheme_method": {
+            "values": [
+                "iterated Laplacian"
+            ]
+        }, 
+        "cmip6.atmos.dynamical_core.advection.tracers.scheme_name": {
+            "values": [
+                "Other: Two-time-level semi-lagrangian semi-implicit scheme"
+            ]
+        }, 
+        "cmip6.atmos.dynamical_core.advection.tracers.scheme_characteristics": {
+            "values": [
+                "semi-Lagrangian"
+            ]
+        }, 
+        "cmip6.atmos.dynamical_core.advection.tracers.conserved_quantities": {
+            "values": [
+                "tracer mass"
+            ]
+        }, 
+        "cmip6.atmos.dynamical_core.advection.tracers.conservation_method": {
+            "values": [
+                "conservation fixer"
+            ]
+        }, 
+        "cmip6.atmos.dynamical_core.advection.momentum.scheme_name": {
+            "values": [
+                "Other: Two-time-level semi-lagrangian semi-implicit scheme"
+            ]
+        }, 
+        "cmip6.atmos.dynamical_core.advection.momentum.scheme_characteristics": {
+            "values": [
+                "Other: semi-lagrangian scheme"
+            ]
+        }, 
+        "cmip6.atmos.dynamical_core.advection.momentum.scheme_staggering_type": {
+            "values": [
+                "Other: semi-lagrangian scheme"
+            ]
+        }, 
+        "cmip6.atmos.dynamical_core.advection.momentum.conserved_quantities": {
+            "values": [
+                "Angular momentum"
+            ]
+        }, 
+        "cmip6.atmos.dynamical_core.advection.momentum.conservation_method": {
+            "values": [
+                "Other: None"
             ]
         }, 
         "cmip6.atmos.radiation.name": {
