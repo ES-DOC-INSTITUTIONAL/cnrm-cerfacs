@@ -10,7 +10,7 @@
             "publish": "on"
         }, 
         "atmoschem": {
-            "publish": "off"
+            "publish": "on"
         }, 
         "land": {
             "publish": "on"
