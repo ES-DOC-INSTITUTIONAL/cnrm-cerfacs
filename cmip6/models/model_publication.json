@@ -13,7 +13,7 @@
             "publish": "off"
         }, 
         "land": {
-            "publish": "off"
+            "publish": "on"
         }, 
         "ocean": {
             "publish": "on"
