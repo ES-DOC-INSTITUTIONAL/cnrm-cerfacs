@@ -19,7 +19,7 @@
             "publish": "on"
         }, 
         "seaice": {
-            "publish": "off"
+            "publish": "on"
         }
     }, 
     "cnrm-cm6-1-hr": {
