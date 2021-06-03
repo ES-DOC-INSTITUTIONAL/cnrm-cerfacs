@@ -1,7 +1,7 @@
 {
     "cnrm-cm6-1": {
         "toplevel": {
-            "publish": "off"
+            "publish": "on"
         }, 
         "aerosol": {
             "publish": "on"
@@ -47,7 +47,7 @@
     }, 
     "cnrm-esm2-1": {
         "toplevel": {
-            "publish": "off"
+            "publish": "on"
         }, 
         "aerosol": {
             "publish": "on"
